@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketing Digital com Resultados para Empresas</title>
+  <meta name="description" content="Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer — com método e foco em retorno.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#021b23',
+            'brand-green': '#7dc1a3',
+            'brand-light': '#aff4a7',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #021b23 0%, #024a3a 50%, #021b23 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #7dc1a3, #aff4a7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #7dc1a3, #aff4a7);
+      transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(125, 193, 163, 0.4);
+    }
+
+    .service-card {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between py-4">
+        <a href="#topo" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-green to-brand-light"></div>
+          <div>
+            <div class="font-bold text-brand-dark text-sm sm:text-base">A sua marca</div>
+            <div class="text-xs text-gray-600 hidden sm:block">Marketing com foco em retorno</div>
+          </div>
+        </a>
+        <a href="#formulario" class="btn-gradient text-brand-dark font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base whitespace-nowrap">
+          Quero Resultados
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- 1. HERO - FUNDO BRANCO -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-brand-dark leading-tight mb-6 lg:mb-8">
+            Transformamos <span class="gradient-text">Presença Digital</span> em <span class="text-brand-green">Resultados Reais</span>
+          </h1>
+          <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-8 lg:mb-10 max-w-3xl mx-auto">
+            Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer — com método e foco em retorno.
+          </p>
+          <a href="#formulario" class="inline-block btn-gradient text-brand-dark font-bold px-8 py-4 rounded-lg text-lg shadow-lg">
+            Quero Melhorar os Meus Resultados
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTEXTO DO PROBLEMA (MACRO) - GRADIENTE VERDE ESCURO -->
+    <section class="gradient-bg py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 lg:mb-8">
+            <span class="text-brand-light">O Problema Não É</span> <span class="text-white">Estar Online</span>
+          </h2>
+          
+          <p class="text-lg sm:text-xl text-white/90 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+            Hoje, quase todas as empresas têm website, perfis nas redes sociais e até fazem alguns anúncios.
+          </p>
+
+          <p class="text-xl sm:text-2xl font-semibold text-white text-center mb-10 lg:mb-12">
+            Mas continuar invisível online não é falta de presença.<br>
+            <span class="text-brand-light">É falta de sistema.</span>
+          </p>
+          
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-10 mb-10 lg:mb-12">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">O que acontece na prática:</h3>
+            <ul class="space-y-4 lg:space-y-6">
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <span class="text-base sm:text-lg lg:text-xl text-white/90">Os clientes certos não encontram o negócio quando pesquisam</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <span class="text-base sm:text-lg lg:text-xl text-white/90">As redes sociais geram likes, mas não geram negócio</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <span class="text-base sm:text-lg lg:text-xl text-white/90">Os anúncios consomem orçamento sem retorno visível</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <span class="text-base sm:text-lg lg:text-xl text-white/90">O site existe, mas não trabalha para o negócio</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-2xl sm:text-3xl font-bold text-center text-white mb-2">
+            Estar online não chega.
+          </p>
+          <p class="text-2xl sm:text-3xl font-bold text-center mb-10">
+            É preciso <span class="text-brand-light">estar online com estratégia.</span>
+          </p>
+
+          <div class="text-center">
+            <a href="#formulario" class="inline-block border-2 border-white text-white hover:bg-white hover:text-brand-dark font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+              Quero Uma Estratégia
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FILOSOFIA/ABORDAGEM - FUNDO BRANCO -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 lg:mb-8">
+            <span class="text-brand-green">A Nossa Abordagem:</span><br>
+            <span class="text-brand-dark">Resultados Reais, Não Métricas Vazias</span>
+          </h2>
+          
+          <p class="text-lg sm:text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
+            Não trabalhamos para "aumentar seguidores" ou "gerar tráfego".<br>
+            Trabalhamos para <strong class="text-brand-dark">gerar oportunidades comerciais concretas.</strong>
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
+                <span class="text-3xl">🎯</span>
+              </div>
+              <h3 class="text-xl font-bold text-brand-dark mb-3">Foco no ROI</h3>
+              <p class="text-gray-700">Cada ação é pensada para gerar retorno mensurável, não apenas números bonitos.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
+                <span class="text-3xl">🔍</span>
+              </div>
+              <h3 class="text-xl font-bold text-brand-dark mb-3">Transparência Total</h3>
+              <p class="text-gray-700">Sem jargão técnico desnecessário. Comunicação clara sobre o que fazemos e porquê.</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
+                <span class="text-3xl">⚡</span>
+              </div>
+              <h3 class="text-xl font-bold text-brand-dark mb-3">Eficiência</h3>
+              <p class="text-gray-700">Sistemas automatizados que trabalham continuamente, mesmo quando não está online.</p>
+            </div>
+          </div>
+
+          <div class="bg-brand-dark/5 border border-brand-dark/10 rounded-2xl p-8 lg:p-10">
+            <h3 class="text-2xl font-bold text-brand-dark mb-6 text-center">O que pode esperar ao trabalhar connosco:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-lg text-gray-700">Mais pessoas certas a encontrarem o seu negócio no momento certo</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-lg text-gray-700">Anúncios pensados para retorno, não para "gastar orçamento"</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-lg text-gray-700">Presença digital que apoia as vendas, não apenas "marca"</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-lg text-gray-700">Processos automáticos que poupam tempo e aumentam conversões</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center mt-10">
+            <a href="#formulario" class="inline-block border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+              Quero Trabalhar Assim
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SERVIÇOS - GRADIENTE VERDE ESCURO -->
+    <section id="servicos" class="gradient-bg py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
+            <span class="text-brand-light">Como Trabalhamos</span>
+          </h2>
+          <p class="text-xl text-white/80 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
+            Serviços estratégicos focados em gerar oportunidades reais
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
+              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">🎯</div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Anúncios Online</h3>
+              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
+                Google, Facebook e Instagram. Campanhas focadas em atrair clientes com intenção real. Medimos tudo e otimizamos para maximizar retorno.
+              </p>
+            </a>
+
+            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
+              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">🚀</div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Landing Pages</h3>
+              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
+                Páginas rápidas e estratégicas, desenhadas para transformar visitantes em contactos e oportunidades comerciais.
+              </p>
+            </a>
+
+            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
+              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">📱</div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Redes Sociais</h3>
+              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
+                Gestão com propósito comercial. Conteúdo estratégico para posicionar o negócio e apoiar as vendas — não apenas "encher o feed".
+              </p>
+            </a>
+
+            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
+              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">⚡</div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Automações</h3>
+              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
+                Follow-ups automáticos, emails, qualificação de leads. Processos que trabalham 24/7 para aumentar conversões.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMO TRABALHAMOS (PROCESSO) - FUNDO BRANCO -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
+            <span class="text-brand-dark">Processo</span> <span class="text-brand-green">Simples e Estruturado</span>
+          </h2>
+          <p class="text-xl text-gray-700 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
+            Sem complicações. Três passos claros do diagnóstico aos resultados.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="relative">
+              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
+                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">1</div>
+                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Análise</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Percebemos o negócio, o mercado e os objetivos. Identificamos onde está a perder oportunidades e onde faz sentido investir.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
+                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">2</div>
+                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Estratégia</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Criamos um plano personalizado, adaptado ao contexto específico do negócio — sem soluções genéricas ou "pacotes".
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
+                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">3</div>
+                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Execução & Otimização</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Implementamos, medimos resultados e ajustamos continuamente. O objetivo é melhorar desempenho de forma consistente.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a href="#formulario" class="inline-block border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+              Quero Conhecer o Processo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PARA QUEM É/NÃO É - GRADIENTE VERDE ESCURO -->
+    <section class="gradient-bg py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 lg:mb-16">
+            <span class="text-brand-light">Para Quem É</span> <span class="text-white">(e Não É)</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- PARA QUEM É -->
+            <div class="bg-white/5 border-2 border-brand-light/40 rounded-xl p-8">
+              <h3 class="text-2xl font-bold text-brand-light mb-6 flex items-center gap-3">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                Este serviço é para si se:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 text-white/90">
+                  <span class="text-brand-light text-xl">→</span>
+                  <span>Tem um negócio e sente que o digital não está a trabalhar a seu favor</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/90">
+                  <span class="text-brand-light text-xl">→</span>
+                  <span>Já investiu em marketing online mas não viu resultados claros</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/90">
+                  <span class="text-brand-light text-xl">→</span>
+                  <span>Quer clientes reais, não apenas seguidores ou visitas</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/90">
+                  <span class="text-brand-light text-xl">→</span>
+                  <span>Valoriza transparência e decisões baseadas em dados</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/90">
+                  <span class="text-brand-light text-xl">→</span>
+                  <span>Procura crescimento sustentável, não "hacks milagrosos"</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- PARA QUEM NÃO É -->
+            <div class="bg-white/5 border-2 border-white/20 rounded-xl p-8">
+              <h3 class="text-2xl font-bold text-white/70 mb-6 flex items-center gap-3">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                Não é para si se:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 text-white/70">
+                  <span class="text-white/40 text-xl">×</span>
+                  <span>Procura resultados imediatos sem investimento (tempo ou orçamento)</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/70">
+                  <span class="text-white/40 text-xl">×</span>
+                  <span>Quer apenas "estar nas redes" sem objetivo comercial</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/70">
+                  <span class="text-white/40 text-xl">×</span>
+                  <span>Prefere "pacotes standard" em vez de estratégia personalizada</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/70">
+                  <span class="text-white/40 text-xl">×</span>
+                  <span>Não está disposto a testar, medir e ajustar</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/70">
+                  <span class="text-white/40 text-xl">×</span>
+                  <span>Procura "fórmulas mágicas" sem base estratégica</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="#formulario" class="inline-block border-2 border-white text-white hover:bg-white hover:text-brand-dark font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+              Reconheço-me Neste Perfil
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CTA + FORMULÁRIO - FUNDO BRANCO -->
+    <section id="formulario" class="bg-white py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-brand-dark">
+              Pronto Para Fazer o Digital <span class="text-brand-green">Trabalhar Para Si?</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
+              Preencha o formulário abaixo. Analisamos o seu caso e respondemos com uma avaliação honesta sobre se — e como — podemos ajudar.
+            </p>
+          </div>
+
+         <form class="space-y-6 bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 lg:p-10">
+
+  <!-- NOME -->
+  <div>
+    <label for="nome" class="block text-sm font-semibold text-brand-dark mb-2">
+      Nome *
+    </label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      required
+      placeholder="O seu nome"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
+    />
+  </div>
+
+  <!-- EMAIL -->
+  <div>
+    <label for="email" class="block text-sm font-semibold text-brand-dark mb-2">
+      Email *
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      placeholder="o.seu@email.com"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
+    />
+  </div>
+
+  <!-- TELEFONE -->
+  <div>
+    <label for="telefone" class="block text-sm font-semibold text-brand-dark mb-2">
+      Número de telefone *
+    </label>
+    <input
+      type="tel"
+      id="telefone"
+      name="telefone"
+      required
+      placeholder="+351 9XX XXX XXX"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
+    />
+  </div>
+
+  <!-- SERVIÇO PRETENDIDO -->
+  <div>
+    <label for="servico" class="block text-sm font-semibold text-brand-dark mb-2">
+      Serviço que pretende *
+    </label>
+    <select
+      id="servico"
+      name="servico"
+      required
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors bg-white"
+    >
+      <option value="" disabled selected>Selecionar serviço</option>
+      <option value="anuncios">Anúncios Online</option>
+      <option value="landing-pages">Landing Pages</option>
+      <option value="redes-sociais">Redes Sociais</option>
+      <option value="automacoes">Automações</option>
+      <option value="estrategia">Estratégia Digital</option>
+      <option value="nao-sei">Não sei — preciso de orientação</option>
+    </select>
+  </div>
+
+  <!-- ÁREA DE NEGÓCIO -->
+  <div>
+    <label for="area-negocio" class="block text-sm font-semibold text-brand-dark mb-2">
+      Área de negócio *
+    </label>
+    <input
+      type="text"
+      id="area-negocio"
+      name="area-negocio"
+      required
+      placeholder="Ex.: restauração, saúde, serviços, e-commerce…"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
+    />
+  </div>
+
+  <!-- BOTÃO -->
+  <button
+    type="submit"
+    class="w-full btn-gradient text-brand-dark font-bold px-8 py-4 rounded-lg text-lg"
+  >
+    Quero Ser Contactado
+  </button>
+
+  <!-- NOTA DE SEGURANÇA -->
+  <p class="text-center text-sm text-gray-600">
+    Sem compromisso. Os seus dados não são partilhados com terceiros.
+  </p>
+
+</form>
