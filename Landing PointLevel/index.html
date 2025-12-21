@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marketing Digital com Resultados para Empresas</title>
-  <meta name="description" content="Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer — com método e foco em retorno.">
+  <meta name="description" content="Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer – com método e foco em retorno.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,14 +20,25 @@
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
     
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .gradient-bg {
-      background: linear-gradient(135deg, #021b23 0%, #024a3a 50%, #021b23 100%);
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #021b23 0%, #7dc1a3 100%);
+    }
+
+    .gradient-section {
+      background: linear-gradient(135deg, #021b23 0%, #0a3d3d 50%, #7dc1a3 100%);
     }
 
     .gradient-text {
@@ -37,125 +48,326 @@
       background-clip: text;
     }
 
-    .btn-gradient {
+    .btn-primary {
       background: linear-gradient(135deg, #7dc1a3, #aff4a7);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(125, 193, 163, 0.4);
+      color: #021b23;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(125, 193, 163, 0.6);
+    }
+
+    .btn-outline {
+      border: 2px solid white;
       transition: all 0.3s ease;
     }
 
-    .btn-gradient:hover {
+    .btn-outline:hover {
+      background: white;
+      color: #021b23;
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(125, 193, 163, 0.4);
     }
 
     .service-card {
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid rgba(125, 193, 163, 0.2);
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-12px);
+      border-color: #7dc1a3;
+      box-shadow: 0 20px 40px rgba(125, 193, 163, 0.3);
     }
 
-    details summary::-webkit-details-marker {
-      display: none;
+    .floating-animation {
+      animation: float 3s ease-in-out infinite;
     }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.6s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .process-card {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: scale(1.05);
+    }
+
+    .number-badge {
+      background: linear-gradient(135deg, #7dc1a3, #aff4a7);
+      box-shadow: 0 4px 15px rgba(125, 193, 163, 0.4);
+      color: #021b23;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #7dc1a3, #aff4a7);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7dc1a3;
+    }
+    .hero-photo-img {
+  transform: translateY(24px);
+  width: 100%;
+  max-width: 560px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+
+  /* Fade out inferior */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0) 100%
+  );
+}
+.hero-photo-img {
+  transform: translateY(16px);
+}
+
   </style>
 </head>
 
 <body class="antialiased">
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between py-4">
-        <a href="#topo" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-green to-brand-light"></div>
-          <div>
-            <div class="font-bold text-brand-dark text-sm sm:text-base">A sua marca</div>
-            <div class="text-xs text-gray-600 hidden sm:block">Marketing com foco em retorno</div>
+        <a href="#topo" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-green to-brand-light flex items-center justify-center text-brand-dark font-bold text-xl group-hover:scale-110 transition-transform">
+            M
+          </div>
+          <div class="hidden sm:block">
+            <div class="font-bold text-brand-dark text-lg">Marketing Digital</div>
+            <div class="text-xs text-gray-600">Resultados Reais</div>
           </div>
         </a>
-        <a href="#formulario" class="btn-gradient text-brand-dark font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base whitespace-nowrap">
-          Quero Resultados
-        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#servicos" class="text-gray-700 hover:text-brand-green font-medium transition-colors">Serviços</a>
+          <a href="#processo" class="text-gray-700 hover:text-brand-green font-medium transition-colors">Processo</a>
+          <a href="#formulario" class="btn-primary font-bold px-6 py-2.5 rounded-lg text-sm">
+            Contactar
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 bottom-0 w-64 bg-white shadow-2xl md:hidden">
+      <div class="p-6">
+        <button onclick="toggleMobileMenu()" class="mb-8">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="flex flex-col gap-6">
+          <a href="#servicos" onclick="toggleMobileMenu()" class="text-gray-700 hover:text-brand-green font-medium">Serviços</a>
+          <a href="#processo" onclick="toggleMobileMenu()" class="text-gray-700 hover:text-brand-green font-medium">Processo</a>
+          <a href="#formulario" onclick="toggleMobileMenu()" class="btn-primary font-bold px-6 py-3 rounded-lg text-center">Contactar</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main id="topo">
+  <main id="topo" class="pt-20">
 
-    <!-- 1. HERO - FUNDO BRANCO -->
-    <section class="bg-white py-16 sm:py-20 lg:py-28">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-brand-dark leading-tight mb-6 lg:mb-8">
-            Transformamos <span class="gradient-text">Presença Digital</span> em <span class="text-brand-green">Resultados Reais</span>
-          </h1>
-          <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-8 lg:mb-10 max-w-3xl mx-auto">
-            Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer — com método e foco em retorno.
-          </p>
-          <a href="#formulario" class="inline-block btn-gradient text-brand-dark font-bold px-8 py-4 rounded-lg text-lg shadow-lg">
-            Quero Melhorar os Meus Resultados
-          </a>
+	    <!-- 1. HERO -->
+	    <section class="gradient-hero py-20 sm:py-28 lg:py-36 relative overflow-hidden">
+	      <div class="absolute inset-0 opacity-10">
+	        <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+	        <div class="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+	      </div>
+	      
+	      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  			<div class="max-w-6xl mx-auto fade-in">
+   			 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+	         <div class="text-center lg:text-left">
+  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+    Transformamos <span class="text-brand-light">Presença Digital</span><br class="hidden sm:block">
+    em Resultados Reais
+  </h1>
+
+  <p class="text-xl sm:text-2xl text-white/90 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
+    Estratégia, anúncios e sistemas digitais pensados para fazer o seu negócio crescer — com método e foco em retorno.
+  </p>
+
+  <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+    <a href="#formulario"
+       class="inline-block bg-white text-brand-dark hover:bg-brand-light font-bold px-8 py-4 rounded-lg text-lg shadow-xl transition-all">
+      Quero Melhorar os Meus Resultados
+    </a>
+
+    <a href="#servicos"
+       class="inline-block btn-outline text-white font-bold px-8 py-4 rounded-lg text-lg">
+      Conhecer Serviços
+    </a>
+  </div>
+
+  <p class="mt-6 text-sm text-white/70">
+    Trabalha diretamente comigo — sem intermediários, sem fórmulas genéricas.
+  </p>
+</div>
+<div class="flex justify-center lg:justify-end hero-photo">
+  <img
+    src="img/pedro.webp"
+    alt="Pedro Costa — Estrategista de Marketing Digital"
+      class="hero-photo-img"
+  />
+</div>
+
+          </div>
         </div>
+      </div>
+
+      <!-- Decorative Wave -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+        </svg>
       </div>
     </section>
 
-    <!-- 2. CONTEXTO DO PROBLEMA (MACRO) - GRADIENTE VERDE ESCURO -->
-    <section class="gradient-bg py-16 sm:py-20 lg:py-28">
+    <!-- 2. PROBLEMA -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 lg:mb-8">
-            <span class="text-brand-light">O Problema Não É</span> <span class="text-white">Estar Online</span>
-          </h2>
-          
-          <p class="text-lg sm:text-xl text-white/90 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
-            Hoje, quase todas as empresas têm website, perfis nas redes sociais e até fazem alguns anúncios.
-          </p>
-
-          <p class="text-xl sm:text-2xl font-semibold text-white text-center mb-10 lg:mb-12">
-            Mas continuar invisível online não é falta de presença.<br>
-            <span class="text-brand-light">É falta de sistema.</span>
-          </p>
-          
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-10 mb-10 lg:mb-12">
-            <h3 class="text-2xl font-bold text-white mb-6 text-center">O que acontece na prática:</h3>
-            <ul class="space-y-4 lg:space-y-6">
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-                <span class="text-base sm:text-lg lg:text-xl text-white/90">Os clientes certos não encontram o negócio quando pesquisam</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-                <span class="text-base sm:text-lg lg:text-xl text-white/90">As redes sociais geram likes, mas não geram negócio</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-                <span class="text-base sm:text-lg lg:text-xl text-white/90">Os anúncios consomem orçamento sem retorno visível</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-                <span class="text-base sm:text-lg lg:text-xl text-white/90">O site existe, mas não trabalha para o negócio</span>
-              </li>
-            </ul>
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12 slide-in-left">
+            <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6">
+              O Problema <span class="gradient-text">Não É</span> Estar Online
+            </h2>
+            <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Hoje, quase todas as empresas têm website, perfis nas redes sociais e até fazem alguns anúncios.
+            </p>
           </div>
 
-          <p class="text-2xl sm:text-3xl font-bold text-center text-white mb-2">
-            Estar online não chega.
-          </p>
-          <p class="text-2xl sm:text-3xl font-bold text-center mb-10">
-            É preciso <span class="text-brand-light">estar online com estratégia.</span>
-          </p>
+          <div class="bg-gradient-to-br from-brand-dark/5 to-brand-green/10 rounded-3xl p-8 lg:p-12 mb-12 border-2 border-brand-green/20">
+            <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-brand-dark">
+              Mas continuar invisível online não é falta de presença.<br>
+              <span class="gradient-text">É falta de sistema.</span>
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <p class="text-gray-700 text-lg">Os clientes certos não encontram o negócio quando pesquisam</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <p class="text-gray-700 text-lg">As redes sociais geram likes, mas não geram negócio</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <p class="text-gray-700 text-lg">Os anúncios consomem orçamento sem retorno visível</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <p class="text-gray-700 text-lg">O site existe, mas não trabalha para o negócio</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="text-center">
-            <a href="#formulario" class="inline-block border-2 border-white text-white hover:bg-white hover:text-brand-dark font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+            <p class="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">
+              Estar online não chega.
+            </p>
+            <p class="text-3xl sm:text-4xl font-bold mb-8">
+              É preciso <span class="gradient-text">estar online com estratégia.</span>
+            </p>
+            <a href="#formulario" class="inline-block btn-primary font-bold px-8 py-4 rounded-lg text-lg">
               Quero Uma Estratégia
             </a>
           </div>
@@ -163,129 +375,153 @@
       </div>
     </section>
 
-    <!-- 3. FILOSOFIA/ABORDAGEM - FUNDO BRANCO -->
-    <section class="bg-white py-16 sm:py-20 lg:py-28">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 lg:mb-8">
-            <span class="text-brand-green">A Nossa Abordagem:</span><br>
-            <span class="text-brand-dark">Resultados Reais, Não Métricas Vazias</span>
+    <!-- 3. ABORDAGEM -->
+    <section class="gradient-section py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-6 lg:mb-8">
+            A Nossa Abordagem:<br>
+            <span class="text-brand-light">Resultados Reais, Não Métricas Vazias</span>
           </h2>
           
-          <p class="text-lg sm:text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-xl sm:text-2xl text-white/90 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
             Não trabalhamos para "aumentar seguidores" ou "gerar tráfego".<br>
-            Trabalhamos para <strong class="text-brand-dark">gerar oportunidades comerciais concretas.</strong>
+            Trabalhamos para gerar <strong>oportunidades comerciais concretas.</strong>
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <span class="text-3xl">🎯</span>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all border border-white/20">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/30 flex items-center justify-center">
+                <svg class="w-10 h-10 text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-brand-dark mb-3">Foco no ROI</h3>
-              <p class="text-gray-700">Cada ação é pensada para gerar retorno mensurável, não apenas números bonitos.</p>
+              <h3 class="text-2xl font-bold text-white mb-4">Foco no ROI</h3>
+              <p class="text-white/80 text-lg leading-relaxed">
+                Cada ação é pensada para gerar retorno mensurável, não apenas números bonitos.
+              </p>
             </div>
 
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <span class="text-3xl">🔍</span>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all border border-white/20">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/30 flex items-center justify-center">
+                <svg class="w-10 h-10 text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-brand-dark mb-3">Transparência Total</h3>
-              <p class="text-gray-700">Sem jargão técnico desnecessário. Comunicação clara sobre o que fazemos e porquê.</p>
+              <h3 class="text-2xl font-bold text-white mb-4">Transparência Total</h3>
+              <p class="text-white/80 text-lg leading-relaxed">
+                Sem jargão técnico desnecessário. Comunicação clara sobre o que fazemos e porquê.
+              </p>
             </div>
 
-            <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <span class="text-3xl">⚡</span>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all border border-white/20">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/30 flex items-center justify-center">
+                <svg class="w-10 h-10 text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-brand-dark mb-3">Eficiência</h3>
-              <p class="text-gray-700">Sistemas automatizados que trabalham continuamente, mesmo quando não está online.</p>
+              <h3 class="text-2xl font-bold text-white mb-4">Eficiência</h3>
+              <p class="text-white/80 text-lg leading-relaxed">
+                Sistemas automatizados que trabalham continuamente, mesmo quando não está online.
+              </p>
             </div>
           </div>
 
-          <div class="bg-brand-dark/5 border border-brand-dark/10 rounded-2xl p-8 lg:p-10">
-            <h3 class="text-2xl font-bold text-brand-dark mb-6 text-center">O que pode esperar ao trabalhar connosco:</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border-2 border-brand-light/30">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">O que pode esperar ao trabalhar connosco:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex items-start gap-4">
+                <svg class="w-8 h-8 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                 </svg>
-                <span class="text-lg text-gray-700">Mais pessoas certas a encontrarem o seu negócio no momento certo</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span class="text-lg text-white/90">Mais pessoas certas a encontrarem o seu negócio no momento certo</span>
+              </div>
+              <div class="flex items-start gap-4">
+                <svg class="w-8 h-8 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                 </svg>
-                <span class="text-lg text-gray-700">Anúncios pensados para retorno, não para "gastar orçamento"</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span class="text-lg text-white/90">Anúncios pensados para retorno, não para "gastar orçamento"</span>
+              </div>
+              <div class="flex items-start gap-4">
+                <svg class="w-8 h-8 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                 </svg>
-                <span class="text-lg text-gray-700">Presença digital que apoia as vendas, não apenas "marca"</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span class="text-lg text-white/90">Presença digital que apoia as vendas, não apenas "marca"</span>
+              </div>
+              <div class="flex items-start gap-4">
+                <svg class="w-8 h-8 text-brand-light flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                 </svg>
-                <span class="text-lg text-gray-700">Processos automáticos que poupam tempo e aumentam conversões</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="text-center mt-10">
-            <a href="#formulario" class="inline-block border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
-              Quero Trabalhar Assim
-            </a>
+                <span class="text-lg text-white/90">Processos automáticos que poupam tempo e aumentam conversões</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. SERVIÇOS - GRADIENTE VERDE ESCURO -->
-    <section id="servicos" class="gradient-bg py-16 sm:py-20 lg:py-28">
+    <!-- 4. SERVIÇOS -->
+    <section id="servicos" class="bg-white py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
-            <span class="text-brand-light">Como Trabalhamos</span>
+            <span class="gradient-text">Como Trabalhamos</span>
           </h2>
-          <p class="text-xl text-white/80 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
+          <p class="text-xl text-gray-700 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
             Serviços estratégicos focados em gerar oportunidades reais
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
-              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">🎯</div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Anúncios Online</h3>
-              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
-                Google, Facebook e Instagram. Campanhas focadas em atrair clientes com intenção real. Medimos tudo e otimizamos para maximizar retorno.
+            <a href="#formulario" onclick="selectService('anuncios')" class="service-card bg-white rounded-2xl p-6 lg:p-8 text-center shadow-lg cursor-pointer block">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/10 flex items-center justify-center floating-animation">
+                <svg class="w-10 h-10 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-4">Anúncios Online</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Google, Facebook e Instagram. Campanhas focadas em atrair clientes com intenção real.
               </p>
             </a>
 
-            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
-              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
-</svg>
-</div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Landing Pages</h3>
-              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
-                Páginas rápidas e estratégicas, desenhadas para transformar visitantes em contactos e oportunidades comerciais.
+            <a href="#formulario" onclick="selectService('landing-pages')" class="service-card bg-white rounded-2xl p-6 lg:p-8 text-center shadow-lg cursor-pointer block">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/10 flex items-center justify-center floating-animation" style="animation-delay: 0.2s">
+                <svg class="w-10 h-10 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-4">Landing Pages</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Páginas rápidas e estratégicas, desenhadas para transformar visitantes em contactos.
               </p>
             </a>
 
-            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
-              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">📱</div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Redes Sociais</h3>
-              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
-                Gestão com propósito comercial. Conteúdo estratégico para posicionar o negócio e apoiar as vendas — não apenas "encher o feed".
+            <a href="#formulario" onclick="selectService('redes-sociais')" class="service-card bg-white rounded-2xl p-6 lg:p-8 text-center shadow-lg cursor-pointer block">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/10 flex items-center justify-center floating-animation" style="animation-delay: 0.4s">
+                <svg class="w-10 h-10 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-4">Redes Sociais</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Gestão com propósito comercial. Conteúdo estratégico para posicionar o negócio.
               </p>
             </a>
 
-            <a href="#formulario" class="service-card bg-white/5 border-2 border-brand-green/30 hover:border-brand-green rounded-xl p-6 lg:p-8 text-center cursor-pointer group">
-              <div class="text-5xl sm:text-6xl mb-4 lg:mb-6">⚡</div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-brand-light transition-colors">Automações</h3>
-              <p class="text-sm sm:text-base text-white/80 leading-relaxed">
-                Follow-ups automáticos, emails, qualificação de leads. Processos que trabalham 24/7 para aumentar conversões.
+            <a href="#formulario" onclick="selectService('automacoes')" class="service-card bg-white rounded-2xl p-6 lg:p-8 text-center shadow-lg cursor-pointer block">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-green/10 flex items-center justify-center floating-animation" style="animation-delay: 0.6s">
+                <svg class="w-10 h-10 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-4">Automações</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Follow-ups automáticos, emails, qualificação de leads. Processos que trabalham 24/7.
               </p>
             </a>
           </div>
@@ -293,126 +529,112 @@
       </div>
     </section>
 
-    <!-- 5. COMO TRABALHAMOS (PROCESSO) - FUNDO BRANCO -->
-    <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <!-- 5. PROCESSO -->
+    <section id="processo" class="gradient-section py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
-            <span class="text-brand-dark">Processo</span> <span class="text-brand-green">Simples e Estruturado</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 text-white">
+            Processo <span class="text-brand-light">Simples e Estruturado</span>
           </h2>
-          <p class="text-xl text-gray-700 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
+          <p class="text-xl text-white/90 text-center mb-12 lg:mb-16 max-w-3xl mx-auto">
             Sem complicações. Três passos claros do diagnóstico aos resultados.
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div class="relative">
-              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
-                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">1</div>
-                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Análise</h3>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                  Percebemos o negócio, o mercado e os objetivos. Identificamos onde está a perder oportunidades e onde faz sentido investir.
-                </p>
-              </div>
+            <div class="process-card bg-white/10 backdrop-blur-sm border-2 border-brand-light/30 rounded-2xl p-8 relative">
+              <div class="number-badge absolute -top-5 left-8 font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center">1</div>
+              <h3 class="text-2xl font-bold text-white mb-4 mt-2">Análise</h3>
+              <p class="text-lg text-white/80 leading-relaxed">
+                Percebemos o negócio, o mercado e os objetivos. Identificamos onde está a perder oportunidades.
+              </p>
             </div>
 
-            <div class="relative">
-              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
-                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">2</div>
-                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Estratégia</h3>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                  Criamos um plano personalizado, adaptado ao contexto específico do negócio — sem soluções genéricas ou "pacotes".
-                </p>
-              </div>
+            <div class="process-card bg-white/10 backdrop-blur-sm border-2 border-brand-light/30 rounded-2xl p-8 relative">
+              <div class="number-badge absolute -top-5 left-8 font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center">2</div>
+              <h3 class="text-2xl font-bold text-white mb-4 mt-2">Estratégia</h3>
+              <p class="text-lg text-white/80 leading-relaxed">
+                Criamos um plano personalizado, adaptado ao contexto específico do negócio.
+              </p>
             </div>
 
-            <div class="relative">
-              <div class="bg-brand-dark/5 border-2 border-brand-green/30 rounded-xl p-8 h-full">
-                <div class="absolute -top-4 left-8 bg-brand-green text-white font-bold text-xl w-10 h-10 rounded-full flex items-center justify-center">3</div>
-                <h3 class="text-2xl font-bold text-brand-dark mb-4 mt-2">Execução & Otimização</h3>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                  Implementamos, medimos resultados e ajustamos continuamente. O objetivo é melhorar desempenho de forma consistente.
-                </p>
-              </div>
+            <div class="process-card bg-white/10 backdrop-blur-sm border-2 border-brand-light/30 rounded-2xl p-8 relative">
+              <div class="number-badge absolute -top-5 left-8 font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center">3</div>
+              <h3 class="text-2xl font-bold text-white mb-4 mt-2">Execução</h3>
+              <p class="text-lg text-white/80 leading-relaxed">
+                Implementamos, medimos resultados e ajustamos continuamente para melhorar desempenho.
+              </p>
             </div>
-          </div>
-
-          <div class="text-center">
-            <a href="#formulario" class="inline-block border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
-              Quero Conhecer o Processo
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. PARA QUEM É/NÃO É - GRADIENTE VERDE ESCURO -->
-    <section class="gradient-bg py-16 sm:py-20 lg:py-28">
+    <!-- 6. PARA QUEM É -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 lg:mb-16">
-            <span class="text-brand-light">Para Quem É</span> <span class="text-white">(e Não É)</span>
+            <span class="gradient-text">Para Quem É</span> <span class="text-brand-dark">(e Não É)</span>
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- PARA QUEM É -->
-            <div class="bg-white/5 border-2 border-brand-light/40 rounded-xl p-8">
-              <h3 class="text-2xl font-bold text-brand-light mb-6 flex items-center gap-3">
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="bg-gradient-to-br from-brand-green/5 to-brand-light/10 border-2 border-brand-green/30 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-brand-dark mb-6 flex items-center gap-3">
+                <svg class="w-8 h-8 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                 </svg>
                 Este serviço é para si se:
               </h3>
               <ul class="space-y-4">
-                <li class="flex items-start gap-3 text-white/90">
-                  <span class="text-brand-light text-xl">→</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-brand-green text-xl font-bold">→</span>
                   <span>Tem um negócio e sente que o digital não está a trabalhar a seu favor</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/90">
-                  <span class="text-brand-light text-xl">→</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-brand-green text-xl font-bold">→</span>
                   <span>Já investiu em marketing online mas não viu resultados claros</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/90">
-                  <span class="text-brand-light text-xl">→</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-brand-green text-xl font-bold">→</span>
                   <span>Quer clientes reais, não apenas seguidores ou visitas</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/90">
-                  <span class="text-brand-light text-xl">→</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-brand-green text-xl font-bold">→</span>
                   <span>Valoriza transparência e decisões baseadas em dados</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/90">
-                  <span class="text-brand-light text-xl">→</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-brand-green text-xl font-bold">→</span>
                   <span>Procura crescimento sustentável, não "hacks milagrosos"</span>
                 </li>
               </ul>
             </div>
 
-            <!-- PARA QUEM NÃO É -->
-            <div class="bg-white/5 border-2 border-white/20 rounded-xl p-8">
-              <h3 class="text-2xl font-bold text-white/70 mb-6 flex items-center gap-3">
+            <div class="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-red-800 mb-6 flex items-center gap-3">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
                 Não é para si se:
               </h3>
               <ul class="space-y-4">
-                <li class="flex items-start gap-3 text-white/70">
-                  <span class="text-white/40 text-xl">×</span>
-                  <span>Procura resultados imediatos sem investimento (tempo ou orçamento)</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-red-600 text-xl font-bold">×</span>
+                  <span>Procura resultados imediatos sem investimento</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/70">
-                  <span class="text-white/40 text-xl">×</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-red-600 text-xl font-bold">×</span>
                   <span>Quer apenas "estar nas redes" sem objetivo comercial</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/70">
-                  <span class="text-white/40 text-xl">×</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-red-600 text-xl font-bold">×</span>
                   <span>Prefere "pacotes standard" em vez de estratégia personalizada</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/70">
-                  <span class="text-white/40 text-xl">×</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-red-600 text-xl font-bold">×</span>
                   <span>Não está disposto a testar, medir e ajustar</span>
                 </li>
-                <li class="flex items-start gap-3 text-white/70">
-                  <span class="text-white/40 text-xl">×</span>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <span class="text-red-600 text-xl font-bold">×</span>
                   <span>Procura "fórmulas mágicas" sem base estratégica</span>
                 </li>
               </ul>
@@ -420,7 +642,7 @@
           </div>
 
           <div class="text-center mt-12">
-            <a href="#formulario" class="inline-block border-2 border-white text-white hover:bg-white hover:text-brand-dark font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+            <a href="#formulario" class="inline-block btn-primary font-bold px-8 py-4 rounded-lg text-lg">
               Reconheço-me Neste Perfil
             </a>
           </div>
@@ -428,113 +650,205 @@
       </div>
     </section>
 
-    <!-- 7. CTA + FORMULÁRIO - FUNDO BRANCO -->
-    <section id="formulario" class="bg-white py-16 sm:py-20 lg:py-28">
+    <!-- 7. FORMULÁRIO -->
+    <section id="formulario" class="gradient-section py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto">
+        <div class="max-w-3xl mx-auto">
           <div class="text-center mb-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-brand-dark">
-              Pronto Para Fazer o Digital <span class="text-brand-green">Trabalhar Para Si?</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Pronto Para Fazer o Digital <span class="text-brand-light">Trabalhar Para Si?</span>
             </h2>
-            <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Preencha o formulário abaixo. Analisamos o seu caso e respondemos com uma avaliação honesta sobre se — e como — podemos ajudar.
+            <p class="text-xl text-white/90 leading-relaxed">
+              Preencha o formulário abaixo. Analisamos o seu caso e respondemos com uma avaliação honesta.
             </p>
           </div>
 
-         <form class="space-y-6 bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 lg:p-10">
+          <form class="space-y-6 bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="nome" class="block text-sm font-semibold text-brand-dark mb-2">
+                  Nome *
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  placeholder="O seu nome"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                />
+              </div>
 
-  <!-- NOME -->
-  <div>
-    <label for="nome" class="block text-sm font-semibold text-brand-dark mb-2">
-      Nome *
-    </label>
-    <input
-      type="text"
-      id="nome"
-      name="nome"
-      required
-      placeholder="O seu nome"
-      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
-    />
-  </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-brand-dark mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="o.seu@email.com"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+                />
+              </div>
+            </div>
 
-  <!-- EMAIL -->
-  <div>
-    <label for="email" class="block text-sm font-semibold text-brand-dark mb-2">
-      Email *
-    </label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      placeholder="o.seu@email.com"
-      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
-    />
-  </div>
+            <div>
+              <label for="telefone" class="block text-sm font-semibold text-brand-dark mb-2">
+                Número de telefone *
+              </label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                placeholder="+351 9XX XXX XXX"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+              />
+            </div>
 
-  <!-- TELEFONE -->
-  <div>
-    <label for="telefone" class="block text-sm font-semibold text-brand-dark mb-2">
-      Número de telefone *
-    </label>
-    <input
-      type="tel"
-      id="telefone"
-      name="telefone"
-      required
-      placeholder="+351 9XX XXX XXX"
-      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
-    />
-  </div>
+            <div>
+              <label for="servico" class="block text-sm font-semibold text-brand-dark mb-2">
+                Serviço que pretende *
+              </label>
+              <select
+                id="servico"
+                name="servico"
+                required
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors bg-white"
+              >
+                <option value="" disabled selected>Selecionar serviço</option>
+                <option value="anuncios">Anúncios Online</option>
+                <option value="landing-pages">Landing Pages</option>
+                <option value="redes-sociais">Redes Sociais</option>
+                <option value="automacoes">Automações</option>
+                <option value="estrategia">Estratégia Digital</option>
+                <option value="nao-sei">Não sei – preciso de orientação</option>
+              </select>
+            </div>
 
-  <!-- SERVIÇO PRETENDIDO -->
-  <div>
-    <label for="servico" class="block text-sm font-semibold text-brand-dark mb-2">
-      Serviço que pretende *
-    </label>
-    <select
-      id="servico"
-      name="servico"
-      required
-      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors bg-white"
-    >
-      <option value="" disabled selected>Selecionar serviço</option>
-      <option value="anuncios">Anúncios Online</option>
-      <option value="landing-pages">Landing Pages</option>
-      <option value="redes-sociais">Redes Sociais</option>
-      <option value="automacoes">Automações</option>
-      <option value="estrategia">Estratégia Digital</option>
-      <option value="nao-sei">Não sei — preciso de orientação</option>
-    </select>
-  </div>
+            <div>
+              <label for="area-negocio" class="block text-sm font-semibold text-brand-dark mb-2">
+                Área de negócio *
+              </label>
+              <input
+                type="text"
+                id="area-negocio"
+                name="area-negocio"
+                required
+                placeholder="Ex.: restauração, saúde, serviços, e-commerce…"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-green focus:outline-none transition-colors"
+              />
+            </div>
 
-  <!-- ÁREA DE NEGÓCIO -->
-  <div>
-    <label for="area-negocio" class="block text-sm font-semibold text-brand-dark mb-2">
-      Área de negócio *
-    </label>
-    <input
-      type="text"
-      id="area-negocio"
-      name="area-negocio"
-      required
-      placeholder="Ex.: restauração, saúde, serviços, e-commerce…"
-      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-green focus:outline-none transition-colors"
-    />
-  </div>
+            <button
+              type="submit"
+              class="w-full btn-primary font-bold px-8 py-4 rounded-xl text-lg"
+            >
+              Quero Ser Contactado
+            </button>
 
-  <!-- BOTÃO -->
-  <button
-    type="submit"
-    class="w-full btn-gradient text-brand-dark font-bold px-8 py-4 rounded-lg text-lg"
-  >
-    Quero Ser Contactado
-  </button>
+            <p class="text-center text-sm text-gray-600 flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Sem compromisso. Os seus dados não são partilhados com terceiros.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-  <!-- NOTA DE SEGURANÇA -->
-  <p class="text-center text-sm text-gray-600">
-    Sem compromisso. Os seus dados não são partilhados com terceiros.
-  </p>
+  </main>
 
-</form>
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-green to-brand-light flex items-center justify-center text-brand-dark font-bold text-xl">
+                M
+              </div>
+              <div>
+                <div class="font-bold text-lg">Marketing Digital</div>
+                <div class="text-sm text-brand-green">Resultados Reais</div>
+              </div>
+            </div>
+            <p class="text-white/70">
+              Transformamos presença digital em resultados concretos para o seu negócio.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-brand-light">Links Rápidos</h4>
+            <ul class="space-y-2">
+              <li><a href="#servicos" class="text-white/70 hover:text-brand-light transition-colors">Serviços</a></li>
+              <li><a href="#processo" class="text-white/70 hover:text-brand-light transition-colors">Processo</a></li>
+              <li><a href="#formulario" class="text-white/70 hover:text-brand-light transition-colors">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-brand-light">Contacto</h4>
+            <ul class="space-y-2 text-white/70">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                info@marketing.pt
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                +351 XXX XXX XXX
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
+          <p>&copy; 2024 Marketing Digital. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('mobileMenu');
+      const isClickInside = menu.contains(event.target) || event.target.closest('button[onclick="toggleMobileMenu()"]');
+      
+      if (!isClickInside && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+      }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          const menu = document.getElementById('mobileMenu');
+          if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
