@@ -159,6 +159,7 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #7dc1a3;
     }
+	  
     .hero-photo-img {
   transform: translateY(24px);
   width: 100%;
@@ -177,8 +178,38 @@
     rgba(0,0,0,0) 100%
   );
 }
+	  
 .hero-photo-img {
   transform: translateY(16px);
+}
+	  
+.hero-photo-label {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+
+  padding: 6px 14px;
+  border-radius: 9999px;
+
+  pointer-events: none;
+}
+	  
+@media (max-width: 640px) {
+  .hero-photo-label {
+    bottom: 20px;
+    font-size: 0.8rem;
+  }
 }
 
   </style>
@@ -283,8 +314,20 @@
     alt="Pedro Costa — Estrategista de Marketing Digital"
       class="hero-photo-img"
   />
+	<div class="relative flex justify-center lg:justify-end">
+  <img
+    src="img/pedro.webp"
+    alt="Pedro Costa — Estrategista Digital"
+    class="hero-photo-img"
+  />
+
+  <!-- Texto sobreposto -->
+  <div class="hero-photo-label">
+    Pedro Costa <span>| Estrategista Digital</span>
+  </div>
 </div>
 
+			</div>
           </div>
         </div>
       </div>
