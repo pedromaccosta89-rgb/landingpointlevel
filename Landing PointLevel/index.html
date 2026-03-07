@@ -266,6 +266,69 @@
   }
 }
 
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid rgba(125, 193, 163, 0.25);
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open {
+      border-color: rgba(125, 193, 163, 0.6);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      transition: color 0.2s ease;
+    }
+
+    .faq-question:hover {
+      color: #aff4a7;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: #7dc1a3;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      color: #aff4a7;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.25rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9375rem;
+      line-height: 1.75;
+    }
+
   </style>
 </head>
 
@@ -777,7 +840,105 @@
       </div>
     </section>
 
-    <!-- 7. FORMULÁRIO -->
+    <!-- 7. FAQ -->
+    <section id="faq" class="bg-brand-dark py-16 sm:py-20 lg:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <p class="text-brand-green font-semibold uppercase tracking-wider text-sm mb-3">FAQ</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Perguntas <span class="gradient-text">Frequentes</span>
+            </h2>
+          </div>
+
+          <div class="space-y-3" role="list">
+
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                id="faq-btn-1"
+                onclick="toggleFaq(this)"
+              >
+                <span>Vou ter retorno mesmo?</span>
+                <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
+                <div class="faq-answer-inner">
+                  Não garantimos números porque dependem do teu negócio, mercado e oferta. O que garantimos é um sistema estruturado — anúncios, landing page e qualificação — construído para converter, monitorizado e otimizado continuamente. Antes de começar, analisamos se faz sentido para o teu caso específico.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                id="faq-btn-2"
+                onclick="toggleFaq(this)"
+              >
+                <span>Já tentei anúncios e não funcionou</span>
+                <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
+                <div class="faq-answer-inner">
+                  Na maioria dos casos o problema não são os anúncios — é a falta de sistema à volta deles. Anúncios sem landing page otimizada, sem qualificação e sem acompanhamento de métricas dificilmente funcionam. É exatamente isso que resolvemos.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                id="faq-btn-3"
+                onclick="toggleFaq(this)"
+              >
+                <span>Não sei se é para o meu negócio</span>
+                <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
+                <div class="faq-answer-inner">
+                  Se tens um serviço ou produto com margem suficiente para justificar o custo de aquisição de um cliente, provavelmente faz sentido. A melhor forma de perceber é numa chamada de 20 minutos — sem compromisso.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+                id="faq-btn-4"
+                onclick="toggleFaq(this)"
+              >
+                <span>Prefiro trabalhar com alguém próximo, não uma agência grande</span>
+                <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
+                <div class="faq-answer-inner">
+                  Trabalhas diretamente comigo, não com uma equipa de conta-corrente. Tens acesso direto, respostas rápidas e um serviço feito à medida — não um pacote standard.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FORMULÁRIO -->
     <section id="formulario" class="gradient-section py-16 sm:py-20 lg:py-28">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
@@ -994,6 +1155,24 @@
         formFeedback.classList.remove('hidden');
         leadForm.reset();
       });
+    }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item');
+      var answer = document.getElementById(btn.getAttribute('aria-controls'));
+      var isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        openItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
