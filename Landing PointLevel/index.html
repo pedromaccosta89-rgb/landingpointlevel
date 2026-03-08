@@ -106,18 +106,31 @@
       justify-content: center;
     }
     .hero-photo-wrap img {
-      width: 340px;
+      width: 480px;
       max-width: 100%;
-      border-radius: 24px;
       position: relative;
       z-index: 2;
-      filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+      filter:
+        drop-shadow(0 0 70px rgba(125,193,163,0.22))
+        drop-shadow(0 30px 80px rgba(0,0,0,0.55));
+      mask-image: radial-gradient(
+        ellipse 82% 88% at 50% 36%,
+        black 30%,
+        rgba(0,0,0,0.85) 52%,
+        transparent 76%
+      );
+      -webkit-mask-image: radial-gradient(
+        ellipse 82% 88% at 50% 36%,
+        black 30%,
+        rgba(0,0,0,0.85) 52%,
+        transparent 76%
+      );
     }
     .hero-photo-wrap::before {
       content: '';
       position: absolute;
       inset: 20px -20px -20px 20px;
-      border: 2px solid rgba(125,193,163,0.3);
+      border: 2px solid rgba(125,193,163,0.2);
       border-radius: 28px;
       z-index: 1;
     }
